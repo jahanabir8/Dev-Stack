@@ -69,7 +69,9 @@ export default function TechCard({
         onClick={() => handleTechClick(techData)}
         className={`w-full cursor-pointer ${isAdded ? "bg-gray-300" : "bg-gray-900"} text-white text-sm font-medium py-2.5 rounded-xl`}
       >
-        Add to Stack
+        {
+          isAdded ? '✓ Added to Stack' : 'Add to Stack'
+        }
       </button>
     </div>
   );
