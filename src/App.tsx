@@ -4,6 +4,7 @@ import Hero from "./Component/Hero/Hero";
 import Nav from "./Component/Nav/Nav";
 import Technologies from "./Component/Technologies/Technologies";
 import { ToastContainer } from "react-toastify";
+import Footer from "./Component/Footer/Footer";
 
 const fetchTechData = async () => {
   const res = await fetch("/data.json");
@@ -22,6 +23,7 @@ function App() {
         <Technologies techDataPromise={techDataPromise}></Technologies>
       </Suspense>
       <ToastContainer />
+      <Footer></Footer>
     </>
   );
 }

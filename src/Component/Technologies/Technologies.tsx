@@ -72,7 +72,7 @@ export default function Technologies({ techDataPromise }: TechnologiesProps) {
 //   console.log(selected);
 
   return (
-    <div className="">
+    <div className="tech-section pb-15">
       <div className="px-5 xl:px-0 md:max-w-7xl mx-auto">
         <div className="content mb-10">
           <h3 className="text-[36px] font-bold">

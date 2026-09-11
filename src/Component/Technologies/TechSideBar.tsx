@@ -11,7 +11,7 @@ export default function TechSideBar({
   selected,
   handleRemove,
   handleRemoveAll,
-  
+
 }: TechSideBarProps) {
   return (
     <div className="sticky top-6 border border-gray-100 shadow-sm rounded-2xl p-5 bg-white h-fit">
@@ -43,7 +43,7 @@ export default function TechSideBar({
               <button
                 onClick={() => handleRemove(tech)}
                 aria-label={`Remove ${tech.name}`}
-                className="text-gray-300 hover:text-gray-500 group-hover:opacity-100 transition-opacity"
+                className="text-gray-300 hover:text-gray-500 group-hover:opacity-100 transition-opacity cursor-pointer"
               >
                 <HiMiniXMark />
               </button>
