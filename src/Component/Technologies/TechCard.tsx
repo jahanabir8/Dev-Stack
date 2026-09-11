@@ -1,4 +1,6 @@
+// import { ToastContainer } from "react-toastify";
 import type { TechType } from "../Type";
+import { toast } from "react-toastify";
 
 export interface TechCardProps {
   techData: TechType;
@@ -28,6 +30,8 @@ export default function TechCard({
 
   const handleTechClick = (tech: TechType) => {
     handleSelectedTechs(tech);
+
+    toast.success(`${techData.name} added to your stack!`);
   };
 
   return (

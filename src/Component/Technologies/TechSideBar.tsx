@@ -1,3 +1,4 @@
+import { HiMiniXMark } from "react-icons/hi2";
 import type { TechType } from "../Type";
 
 export interface TechSideBarProps {
@@ -10,6 +11,7 @@ export default function TechSideBar({
   selected,
   handleRemove,
   handleRemoveAll,
+  
 }: TechSideBarProps) {
   return (
     <div className="sticky top-6 border border-gray-100 shadow-sm rounded-2xl p-5 bg-white h-fit">
@@ -41,16 +43,9 @@ export default function TechSideBar({
               <button
                 onClick={() => handleRemove(tech)}
                 aria-label={`Remove ${tech.name}`}
-                className="text-gray-300 hover:text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                className="text-gray-300 hover:text-gray-500 group-hover:opacity-100 transition-opacity"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <HiMiniXMark />
               </button>
             </div>
           ))}

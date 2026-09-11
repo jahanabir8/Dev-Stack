@@ -7,6 +7,7 @@ import type { TechType } from "../Type";
 // import Technology from "./Technology";
 import TechCard from "./TechCard";
 import TechSideBar from "./TechSideBar";
+import { toast } from "react-toastify";
 
 // const Technologies = ({ techDataPromise }) => {
 
@@ -60,10 +61,12 @@ export default function Technologies({ techDataPromise }: TechnologiesProps) {
 
   const handleRemove = (item: TechType) =>{
     setSelected(selected.filter((i)=> i.id !== item.id))
+    toast.success(`Removed ${item.name} from your stack Successfully`);
   }
 
   const handleRemoveAll = ()=>{
     setSelected([])
+    toast.success(`Removed All your stack Successfully`);
   }
 
 //   console.log(selected);
