@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-5 flex items-center gap-2">
-              <div className="flex h-6 w-6 items-center justify-center rounded-md bg-gradient-to-br from-purple-500 to-pink-500 text-[11px] font-bold text-white">
+              <div className="flex h-6 w-6 items-center justify-center rounded-md bg-linear-to-br from-purple-500 to-pink-500 text-[11px] font-bold text-white">
                 DS
               </div>
 

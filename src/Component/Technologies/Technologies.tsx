@@ -4,10 +4,9 @@
 
 import { use, useState } from "react";
 import type { TechType } from "../Type";
-// import Technology from "./Technology";
-import TechCard from "./TechCard";
 import TechSideBar from "./TechSideBar";
 import { toast } from "react-toastify";
+import TechCard from "./TechCard";
 
 // const Technologies = ({ techDataPromise }) => {
 
