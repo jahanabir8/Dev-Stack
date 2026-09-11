@@ -62,11 +62,15 @@ export default function Technologies({ techDataPromise }: TechnologiesProps) {
     setSelected(selected.filter((i)=> i.id !== item.id))
   }
 
+  const handleRemoveAll = ()=>{
+    setSelected([])
+  }
+
 //   console.log(selected);
 
   return (
     <div className="">
-      <div className="md:max-w-7xl mx-auto">
+      <div className="px-5 xl:px-0 md:max-w-7xl mx-auto">
         <div className="content mb-10">
           <h3 className="text-[36px] font-bold">
             Explore the{" "}
@@ -78,9 +82,9 @@ export default function Technologies({ techDataPromise }: TechnologiesProps) {
             Pick one technology per category to build your ideal stack.
           </p>
         </div>
-        <div className="technologies-section grid grid-cols-12 gap-8">
-          <div className="col-span-9">
-            <div className="grid grid-cols-3 gap-5">
+        <div className="technologies-section grid lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-9">
+            <div className="grid md:grid-cols-3 gap-5">
               {techDatas.map((techData) =>{ 
                 // <Technology techData={techData}></Technology>
                 const isAdded: boolean = selected.some((tech) => tech.id === techData.id);
@@ -88,8 +92,8 @@ export default function Technologies({ techDataPromise }: TechnologiesProps) {
               })}
             </div>
           </div>
-          <div className="col-span-3">
-            <TechSideBar selected={selected} handleRemove={handleRemove}></TechSideBar>
+          <div className="lg:col-span-3">
+            <TechSideBar selected={selected} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll}></TechSideBar>
           </div>
         </div>
       </div>

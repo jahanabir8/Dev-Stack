@@ -3,9 +3,10 @@ import type { TechType } from "../Type";
 export interface TechSideBarProps {
   selected: TechType[];
   handleRemove: (tech: TechType)=>void;
+  handleRemoveAll: ()=> void
 }
 
-export default function TechSideBar({ selected, handleRemove }: TechSideBarProps) {
+export default function TechSideBar({ selected, handleRemove, handleRemoveAll }: TechSideBarProps) {
   return (
     // <>
 
@@ -64,7 +65,7 @@ export default function TechSideBar({ selected, handleRemove }: TechSideBarProps
       )}
 
       {
-        selected.length > 1 ? <button className="w-full border border-red-200 text-red-500 text-sm font-medium py-2 rounded-xl hover:bg-red-50 transition-colors">
+        selected.length > 0 ? <button onClick={handleRemoveAll} className="w-full border border-red-200 text-red-500 text-sm font-medium py-2 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
         Remove All
       </button> : ''
       }
